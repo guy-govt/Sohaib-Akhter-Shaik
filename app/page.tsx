@@ -1,14 +1,11 @@
 "use client"
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Github, Linkedin, Mail, ChevronDown, Menu, X, Globe, BookOpen, Gamepad2 } from "lucide-react";
-import { Progress } from "@/components/ui/progress";
+import { Github, Linkedin, Mail, ChevronDown, Menu, Globe, BookOpen, Gamepad2 } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const Portfolio = () => {
-  const [activeSection, setActiveSection] = useState('home');
-
   const skills = [
     { name: "Python", proficiency: 100, color: "bg-blue-500" },
     { name: "Java", proficiency: 75, color: "bg-red-500" },
@@ -69,7 +66,6 @@ const Portfolio = () => {
               key={item}
               variant="ghost"
               className="hover:bg-primary/10"
-              onClick={() => setActiveSection(item.toLowerCase())}
             >
               {item}
             </Button>
@@ -90,7 +86,6 @@ const Portfolio = () => {
                   key={item}
                   variant="ghost"
                   className="w-full justify-start"
-                  onClick={() => setActiveSection(item.toLowerCase())}
                 >
                   {item}
                 </Button>
@@ -142,7 +137,7 @@ const Portfolio = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-green-500/10 opacity-50" />
           <CardContent className="pt-6 relative">
             <p className="text-lg leading-relaxed">
-              Hello! I'm Sohaib Akhter Shaik, a dedicated software engineer passionate about harnessing the power of Artificial Intelligence and Machine Learning. My career goal is to contribute to innovative projects that push the boundaries of technology, ultimately aiming to make a significant impact in the AI/ML landscape.
+              Hello! I&apos;m Sohaib Akhter Shaik, a dedicated software engineer passionate about harnessing the power of Artificial Intelligence and Machine Learning. My career goal is to contribute to innovative projects that push the boundaries of technology, ultimately aiming to make a significant impact in the AI/ML landscape.
             </p>
           </CardContent>
         </Card>
@@ -220,7 +215,7 @@ const Portfolio = () => {
             <Card key={index} className="overflow-hidden group hover:shadow-lg transition-all duration-300">
               <div className={`absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity ${testimonial.color}`} />
               <CardContent className="pt-6 relative">
-                <p className="text-lg italic mb-4">"{testimonial.quote}"</p>
+                <p className="text-lg italic mb-4">&quot;{testimonial.quote}&quot;</p>
                 <p className="font-medium text-right">- {testimonial.author}</p>
               </CardContent>
             </Card>
